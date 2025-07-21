@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asteroid Miner Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🚀 Asteroid Mining Filter</h1>
+
+  <div class="filters">
+    <label>Max Distance (AU): <input type="number" id="maxDistance" value="0.05" step="0.01"></label>
+    <label>Min Value ($): <input type="number" id="minValue" value="1000000000"></label>
+    <label>Min Metal %: <input type="number" id="minMetal" value="0.5" step="0.1"></label>
+    <button onclick="loadAsteroids()">🔍 Filter</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value ($)</th>
+        <th>Distance (AU)</th>
+        <th>Metal %</th>
+        <th>Delta-V (km/s)</th>
+      </tr>
+    </thead>
+    <tbody id="results"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
